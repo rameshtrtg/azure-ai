@@ -14,7 +14,7 @@ namespace AIAnalyzers.ImageClasification
     class FlowerClascification
     {
         private static string predictionEndpoint = "https://eastus.api.cognitive.microsoft.com/";
-        private static string predictionKey = "";
+        private static string predictionKey = "7e1057fe632943e6922f3d114255a3d7";
 
         public FlowerClascification()
         {
@@ -35,7 +35,7 @@ namespace AIAnalyzers.ImageClasification
         public async Task TestIteration()
         {
             var client = AuthenticatePrediction(predictionEndpoint, predictionKey);
-            var projectid = new Guid("");
+            var projectid = new Guid("1ad4bf02-65e5-467c-9e89-2d0b6cb9a08f");
             var imageUrl =new ImageUrl("https://plus.unsplash.com/premium_photo-1721317368393-09204f05aab5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             var publishedName = "Iteration4";
             var predictions = await client.ClassifyImageUrlAsync(projectid, publishedName, imageUrl);
